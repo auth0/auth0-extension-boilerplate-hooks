@@ -1,0 +1,17 @@
+{
+  "title": "Sample Extension",
+  "name": "sample-extension",
+  "version": "1.0.0",
+  "author": "javier.centurion@auth0.com",
+  "description": "A Sample Extension",
+  "type": "application",
+  "keywords": [
+    "auth0"
+  ],
+  "auth0": {
+    "createClient": true,
+    "scopes": "create:rules read:rules delete:rules",
+    "onInstallPath": "/.extensions/on-install",
+    "onUninstallPath": "/.extensions/on-uninstall"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "sample-extension",
+  "version": "1.0.0",
+  "description": "A Sample Extension",
+  "scripts": {
+    "bundle": "webpack -p --config webpack.wt.config.js"
+  },
+  "keywords": [
+    "auth0"
+  ],
+  "author": "javier.centurion@auth0.com",
+  "license": "MIT",
+  "dependencies": {
+    "auth0": "^2.1.0",
+    "auth0-oauth2-express": "^1.1.3",
+    "express": "4.12.4",
+    "jsonwebtoken": "^7.0.0",
+    "lodash": "^4.13.1",
+    "superagent": "^2.0.0-alpha.3",
+    "webtask-tools": "1.3.0"
+  },
+  "devDependencies": {
+    "jade": "1.10.0",
+    "jade-loader": "^0.8.0",
+    "json-loader": "^0.5.4",
+    "lodash": "3.9.3",
+    "request-promise": "^2.0.0",
+    "webpack": "^1.12.9"
+  }
+}
