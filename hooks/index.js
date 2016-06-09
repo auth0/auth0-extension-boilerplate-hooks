@@ -4,7 +4,7 @@ var ManagementClient = require('auth0@2.1.0').ManagementClient;
 var _        = require('lodash');
 var jwt      = require('jsonwebtoken');
 var hooks    = express.Router();
-var Path     = require('path');
+var URLJoin = require('url-join');
 
 module.exports = hooks;
 
@@ -13,7 +13,7 @@ function validateJwt (path) {
     if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
       var token = req.headers.authorization.split(' ')[1];
       var isValid = jwt.verify(token, req.webtaskContext.data.EXTENSION_SECRET, {
-        audience: Path.join(req.webtaskContext.data.WT_URL, path),
+        audience: URLJoin(req.webtaskContext.data.WT_URL, path),
         issuer: 'https://' + req.webtaskContext.data.AUTH0_DOMAIN
       });
 
