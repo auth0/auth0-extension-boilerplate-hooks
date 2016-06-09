@@ -89,7 +89,7 @@ hooks.delete('/on-uninstall', function (req, res) {
 
 1. Go to [Auth0 Extensions](https://manage.auth0.com/#/extensions)
 2. Click on `+ Create Extension`
-3. Fill in the textbox with `https://github.com/auth0/auth0-extension-boilerplate`
+3. Fill in the textbox with `https://github.com/auth0/auth0-extension-boilerplate-hooks`
 4. Click on `continue`
 5. Finally, click on `install`
 
