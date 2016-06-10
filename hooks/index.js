@@ -31,6 +31,7 @@ function validateJwt (path) {
 // Validate JWT for on-install
 hooks.use('/on-install', validateJwt('/.extensions/on-install'));
 hooks.use('/on-uninstall', validateJwt('/.extensions/on-uninstall'));
+hooks.use('/on-update',    validateJwt('/.extensions/on-update'));
 
 // Getting Auth0 APIV2 access_token
 hooks.use(function (req, res, next) {
@@ -63,6 +64,11 @@ hooks.post('/on-install', function (req, res) {
   .catch(function () {
     res.sendStatus(500);
   });
+});
+
+// This endpoint would be called by webtask-gallery
+hooks.delete('/on-update', function (req, res) {
+  res.sendStatus(204);
 });
 
 // This endpoint would be called by webtask-gallery
